@@ -104,29 +104,29 @@ func TestAllSchedules5(t *testing.T) {
 }
 
 func TestOverlap(t *testing.T) {
-	// Test case 1: Schedule contains a class that overlaps with the given class
+	// Test case 1: Overlaps
 	s := Schedule{
-		{Subject: "math", Day: Monday, StartTime: 9},
+		{Subject: "math", Day: Monday, StartTime: 8},
 		{Subject: "science", Day: Tuesday, StartTime: 10},
-		{Subject: "history", Day: Wednesday, StartTime: 11},
+		{Subject: "history", Day: Wednesday, StartTime: 12},
 	}
-	c := Class{Subject: "english", Day: Wednesday, StartTime: 11}
+	c := Class{Subject: "english", Day: Wednesday, StartTime: 12}
 	if !overlap(s, c) {
 		t.Error("Expected overlap")
 	}
 
-	// Test case 2: Schedule contains a class that doesn't overlap with the given class
+	// Test case 2: Doesn't overlap
 	s = Schedule{
-		{Subject: "math", Day: Monday, StartTime: 9},
+		{Subject: "math", Day: Monday, StartTime: 8},
 		{Subject: "science", Day: Tuesday, StartTime: 10},
-		{Subject: "history", Day: Wednesday, StartTime: 11},
+		{Subject: "history", Day: Wednesday, StartTime: 12},
 	}
-	c = Class{Subject: "english", Day: Wednesday, StartTime: 12}
+	c = Class{Subject: "english", Day: Wednesday, StartTime: 14}
 	if overlap(s, c) {
 		t.Error("Did not expected overlap")
 	}
 
-	// Test case 3: Schedule is empty, so no overlap
+	// Test case 3: Schedule is empty
 	s = Schedule{}
 	c = Class{Subject: "english", Day: Wednesday, StartTime: 12}
 	if overlap(s, c) {
