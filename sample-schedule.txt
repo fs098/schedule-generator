@@ -1,0 +1,19 @@
+# This is a sample schedule for testing purposes
+
+BDados T:Mon 11,Mon 14
+BDados P:Mon 16,Tue 16,Thu 14,Thu 16,Thu 18
+
+Redes T:Mon 14,Fri 14
+Redes P:Mon 16,Tue 14,Thu 14,Thu 16,Fri 11,Fri 16,Fri 18
+
+OOP T:Wed 9,Wed 14
+OOP P:Mon 16,Tue 9,Tue 14,Thu 14,Thu 16,Fri 16,Fri 18
+
+MNum T:Fri 9,Fri 14
+MNum P:Tue 9,Tue 11,Wed 11,Thu 11,Thu 14,Thu 16,Fri 16
+
+InvOp T:Thu 9,Fri 11
+InvOp P:Tue 9,Tue 11,Thu 11
+
+SisOp T:Tue 11,Wed 14
+SisOp P:Tue 14,Tue 16,Wed 16,Thu 14
