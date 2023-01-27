@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// parseLine parses a line of horarios.txt file
+// parseLine parses a line of sample-schedule.txt file
 func parseLine(line string, getWeekday map[string]Weekday) []Class {
 	var (
 		sl      = strings.Split(line, ":")
@@ -44,7 +44,7 @@ func parseLine(line string, getWeekday map[string]Weekday) []Class {
 	return result
 }
 
-// parseClasses parses horarios.txt file
+// parseClasses parses sample-schedule.txt file
 func parseClasses(filename string) [][]Class {
 	getWeekday := map[string]Weekday{
 		"Mon": Monday,
